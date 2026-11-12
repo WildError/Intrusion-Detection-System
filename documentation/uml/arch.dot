@@ -1,0 +1,2 @@
+digraph G { graph [rankdir=TB, nodesep=0.35, ranksep=0.4]; node [shape=box,style="rounded,filled",color="#506578",fillcolor="#f3f7fc",fontname="DejaVu Sans",fontsize=16,margin="0.22,0.13"];
+ ui [label="Представлення: Streamlit UI (app.py)"]; entry [label="Прикладні сервіси: DatasetLoader / ModelTrainer / PredictionService"]; core [label="Обчислювальне ядро: sklearn Pipeline / вибір порога / метрики"]; files [label="Файли: CSV, model.joblib, JSON, PNG, журнал подій"]; ui->entry->core->files; }
