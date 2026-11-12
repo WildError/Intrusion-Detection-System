@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Datasets
+data/
+datasets/
+*.csv
+
+# Trained models and experiments
+app_data/
+runs/
+*.joblib
+*.pkl
+
+# Temporary files
+*.log
+.env
+.DS_Store
