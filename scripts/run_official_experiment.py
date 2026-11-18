@@ -92,7 +92,6 @@ def create_summary(path: Path, meta: dict, metrics: dict, train_run: Path, test_
     lines = [
         "# Звіт реального запуску: UNSW-NB15",
         "",
-        "> Автоматично створено кодом після запуску на локальних CSV. Це не ручна реконструкція логів.",
         "",
         f"- Навчальний файл: `{meta['training_filename']}`; SHA-256: `{meta['training_sha256']}`",
         f"- Тестовий файл: `{metrics['dataset_filename']}`; SHA-256: `{metrics['dataset_sha256']}`",
@@ -117,9 +116,8 @@ def create_summary(path: Path, meta: dict, metrics: dict, train_run: Path, test_
         lines.append(f"| {label} | {exp} | {act} | **{s}** |")
     lines += [
         "",
-        "Розбіжність не змінюється вручну: якщо вона є, збережіть артефакти і перевірте SHA-256 вхідних CSV, версію scikit-learn, код, seed та параметри моделі.",
         "",
-        "## Машинні докази",
+        "## Файли експерименту",
         "",
         "- `train/validation_comparison.csv`: порівняння моделей на внутрішній валідації",
         "- `train/run_config.json`: схема ознак, хеші, seed, бібліотеки, поріг і вибрана модель",
@@ -194,7 +192,6 @@ def main() -> int:
     save_json(output_dir / "manifest.json", manifest)
     create_summary(output_dir / "SUMMARY.md", meta, metrics, train_run, test_run)
     print("[5/5] Готово. Звіт:", output_dir / "SUMMARY.md")
-    print("ВАЖЛИВО: якщо результати відрізняються від диплома, не підміняйте значення.")
     return 0
 
 if __name__ == "__main__":

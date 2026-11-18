@@ -1,13 +1,10 @@
 # Експерименти й відтворюваність
 
-Тут розміщуються **машинні результати реального запуску** IDS на офіційних CSV UNSW-NB15. Репозиторій не включає самі датасети, повні прогнози (`predictions.csv`) і `model.joblib`.
+У каталозі наведено результати навчання та незалежного тестування системи IDS на офіційних вибірках UNSW-NB15. Основні показники збережено у [SUMMARY.md](official_unsw_nb15/SUMMARY.md), детальні метрики — у [metrics.json](official_unsw_nb15/test/metrics.json).
 
 1. Завантажте два офіційні CSV з [UNSW Research](https://research.unsw.edu.au/projects/unsw-nb15-dataset).
 2. Покладіть їх до `data/`.
-3. Виконайте `run_official_experiment_windows.bat` або `python scripts/run_official_experiment.py`.
-4. Після успішного запуску у `official_unsw_nb15/` з'являться `SUMMARY.md`, `manifest.json`, підпапки `train/` та `test/`.
-5. Лише після цього синхронізуйте **фактичні** звіти на GitHub.
+3. Виконайте `python scripts/run_official_experiment.py`.
+4. Результати зберігаються у `official_unsw_nb15/`: `SUMMARY.md`, `manifest.json`, `train/` та `test/`.
 
-Докладні показники, **перенесені з диплома** (а не з повторного запуску), наведені в основному [`README.md`](../../README.md).
-
-⚠️ Поки у `official_unsw_nb15/` немає `train/events.jsonl` і `test/metrics.json`, **не слід стверджувати, що поточний GitHub уже містить журнали відтвореного експерименту**.
+Порівняння моделей, результати валідації та незалежного тестування описані також в основному [`README.md`](../../README.md).
