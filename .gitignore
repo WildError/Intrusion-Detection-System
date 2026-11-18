@@ -1,22 +1,27 @@
-# Python
+# Python and virtual environments
 __pycache__/
 *.py[cod]
 .venv/
 venv/
 .pytest_cache/
+.ipynb_checkpoints/
 
-# Datasets
+# Official datasets and raw inputs - NEVER publish
 data/
 datasets/
 *.csv
 
-# Trained models and experiments
+# Allow curated aggregate experiment tables ONLY
+!documentation/experiments/**/*.csv
+
+# Models, full predictions and local run folders
 app_data/
 runs/
 *.joblib
 *.pkl
+**/predictions.csv
 
-# Temporary files
+# Temporary and personal files
 *.log
 .env
 .DS_Store
