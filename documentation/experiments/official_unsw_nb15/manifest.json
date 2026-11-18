@@ -1,0 +1,22 @@
+{
+  "protocol": "Official UNSW-NB15 train/test; internal 80/20 stratified validation",
+  "generated_utc": "2026-11-18T10:25:47+00:00",
+  "git_revision": null,
+  "seed": 42,
+  "train_run": "20261118-102520-train-e77467bb",
+  "test_run": "20261118-102545-evaluate-85c52ea4",
+  "train_dataset_sha256": "bec7dd5ec88dc2a0ccc7a07879d338395ed7421750f675fd0339e07dfe0648fa",
+  "test_dataset_sha256": "734fe6642edf758f7c94d7d9149426b49d202fe8e7bf0bef47392489c3c0a559",
+  "train_evidence_files": [
+    "run_config.json",
+    "validation_comparison.csv",
+    "events.jsonl"
+  ],
+  "test_evidence_files": [
+    "metrics.json",
+    "run_config.json",
+    "confusion_matrix.png",
+    "per_attack_category.csv",
+    "events.jsonl"
+  ]
+}

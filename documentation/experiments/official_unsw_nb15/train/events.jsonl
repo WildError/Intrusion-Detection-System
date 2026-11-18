@@ -1,0 +1,4 @@
+{"timestamp": "2026-11-18T10:25:20+00:00", "phase": "training", "status": "started"}
+{"timestamp": "2026-11-18T10:25:38+00:00", "phase": "validation", "status": "ok", "model": "logistic_regression", "f1": 0.9552190197036313, "threshold": 0.36}
+{"timestamp": "2026-11-18T10:25:45+00:00", "phase": "validation", "status": "ok", "model": "random_forest", "f1": 0.9648920388989616, "threshold": 0.35}
+{"timestamp": "2026-11-18T10:25:45+00:00", "phase": "training", "status": "ok", "selected_model": "random_forest"}
